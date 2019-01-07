@@ -1,0 +1,30 @@
+{
+  "name": "relaykit",
+  "version": "0.0.0",
+  "description": "A lightweight WebSocket event-relay library for Node.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/",
+    "lint": "eslint src test"
+  },
+  "keywords": ["websocket", "relay", "pubsub", "events", "realtime"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "7.0.0",
+    "jsonwebtoken": "8.5.1",
+    "uuid": "3.3.2",
+    "debug": "4.1.1",
+    "ioredis": "4.14.0",
+    "express": "4.17.1",
+    "helmet": "3.20.0",
+    "pino": "5.13.0",
+    "dotenv": "8.2.0",
+    "compression": "1.7.4"
+  },
+  "devDependencies": {
+    "eslint": "8.0.0"
+  }
+}
