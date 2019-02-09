@@ -1,0 +1,57 @@
+'use strict';
+
+class TokenBucket {
+  constructor(options = {}) {
+    this.capacity = options.capacity || 60;
+    this.refillPerSecond = options.refillPerSecond || this.capacity / 60;
+    this.tokens = this.capacity;
+    this.lastRefill = Date.now();
+  }
+
+  _refill() {
+    const now = Date.now();
+    const elapsed = (now - this.lastRefill) / 1000;
+    this.tokens = Math.min(this.capacity, this.tokens + elapsed * this.refillPerSecond);
+    this.lastRefill = now;
+  }
+
+  allow(cost = 1) {
+    this._refill();
+    if (this.tokens >= cost) {
+      this.tokens -= cost;
+      return true;
+    }
+    return false;
+  }
+}
+
+class RateLimiter {
+  constructor(options = {}) {
+    this.limit = options.limit || 120;
+    this.windowMs = options.windowMs || 60000;
+    this.buckets = new Map();
+  }
+
+  _bucket(key) {
+    const now = Date.now();
+    let bucket = this.buckets.get(key);
+    if (!bucket || now - bucket.windowStart >= this.windowMs) {
+      bucket = { windowStart: now, count: 0 };
+      this.buckets.set(key, bucket);
+    }
+    return bucket;
+  }
+
+  allow(key, cost = 1) {
+    const bucket = this._bucket(key);
+    if (bucket.count + cost > this.limit) return false;
+    bucket.count += cost;
+    return true;
+  }
+
+  clear() {
+    this.buckets.clear();
+  }
+}
+
+module.exports = { TokenBucket, RateLimiter };
