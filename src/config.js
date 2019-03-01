@@ -35,6 +35,10 @@ function loadConfig(overrides) {
   if (!Number.isInteger(merged.port) || merged.port < 1 || merged.port > 65535) {
     throw new ConfigError(`invalid port: ${merged.port}`);
   }
+  const levels = ['debug', 'info', 'warn', 'error', 'silent'];
+  if (levels.indexOf(merged.logLevel) === -1) {
+    throw new ConfigError(`invalid logLevel: ${merged.logLevel}`);
+  }
   if (merged.maxPayloadBytes < 1024) {
     throw new ConfigError('maxPayloadBytes must be at least 1024');
   }
