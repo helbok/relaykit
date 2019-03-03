@@ -45,4 +45,6 @@ function loadConfig(overrides) {
   return merged;
 }
 
+Object.freeze(defaults);
+
 module.exports = { defaults, deepMerge, loadConfig };
