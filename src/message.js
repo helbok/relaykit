@@ -50,4 +50,4 @@ function buildAck(original, ok = true, detail = null) {
   return createMessage('ack', original ? original.topic : null, { ok, id: original ? original.id : null, detail });
 }
 
-module.exports = { MESSAGE_TYPES, MAX_TOPIC_LENGTH, normalizeTopic, createMessage, isMessage, buildAck };
+module.exports = { MESSAGE_TYPES, MAX_TOPIC_LENGTH, normalizeTopic, createMessage, isMessage, isAck, buildAck };
