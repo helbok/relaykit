@@ -21,16 +21,18 @@ class WebSocketTransport extends Transport {
   }
 
   listen() {
-    this.wss.on('connection', (socket, request) => {
-      const connection = new Connection(socket, { id: request.headers['x-client-id'] || undefined });
-      socket.on('close', () => connection.markClosed());
-      socket.on('error', () => connection.markClosed());
-      this.onConnection(connection);
-    });
+    this.wss.on('connection', (socket, request) => this._accept(socket, request));
     this.wss.on('error', (err) => {
       throw new TransportError(`websocket server error: ${err.message}`);
     });
     return this;
+  }
+
+  _accept(socket, request) {
+    const connection = new Connection(socket, { id: request.headers['x-client-id'] || undefined });
+    socket.on('close', () => connection.markClosed());
+    socket.on('error', () => connection.markClosed());
+    this.onConnection(connection);
   }
 
   close() {
