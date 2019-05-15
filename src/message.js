@@ -38,6 +38,10 @@ function createMessage(type, topic, payload, meta = {}) {
   };
 }
 
+function isAck(message) {
+  return isMessage(message) && message.type === 'ack';
+}
+
 function isMessage(value) {
   return value && typeof value === 'object' && typeof value.type === 'string' && MESSAGE_TYPES.includes(value.type);
 }
