@@ -51,6 +51,7 @@ class Relay extends EventEmitter {
     if (!isMessage(message)) {
       throw new InvalidMessageError('malformed message envelope');
     }
+    this.metrics.counter('messages.total').inc();
     if (!this.rateLimiter.allow(connection.id)) {
       connection.send(this.serializer.serialize(createMessage('error', null, { message: 'rate limit exceeded' })));
       return;
