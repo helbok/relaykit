@@ -9,7 +9,7 @@ const { Metrics } = require('./metrics');
 const { JsonSerializer } = require('./serializer');
 const { createLogger } = require('./logger');
 const { loadConfig } = require('./config');
-const { createMessage, isMessage } = require('./message');
+const { createMessage, isMessage, buildAck } = require('./message');
 const { InvalidMessageError } = require('./errors');
 
 class Relay extends EventEmitter {
@@ -59,6 +59,7 @@ class Relay extends EventEmitter {
     switch (message.type) {
       case 'subscribe':
         this.hub.subscribe(message.topic, connection);
+        connection.send(this.serializer.serialize(buildAck(message)));
         break;
       case 'unsubscribe':
         this.hub.unsubscribe(message.topic, connection);
