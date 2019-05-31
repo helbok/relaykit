@@ -33,7 +33,7 @@ class Metrics {
     for (const [k, v] of this.counters) counters[k] = v.value;
     const gauges = {};
     for (const [k, v] of this.gauges) gauges[k] = v.value;
-    return { counters, gauges, ts: Date.now() };
+    return Object.freeze({ counters, gauges, ts: Date.now() });
   }
 
   toJSON() {
