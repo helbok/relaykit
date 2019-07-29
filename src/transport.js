@@ -29,7 +29,7 @@ class WebSocketTransport extends Transport {
   }
 
   _accept(socket, request) {
-    const connection = new Connection(socket, { id: request.headers['x-client-id'] || undefined });
+    const connection = new Connection(socket, { id: (request.headers && request.headers['x-client-id']) || undefined });
     socket.on('close', () => connection.markClosed());
     socket.on('error', () => connection.markClosed());
     this.onConnection(connection);
