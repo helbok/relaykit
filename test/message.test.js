@@ -31,3 +31,8 @@ test('isMessage accepts valid envelopes and rejects junk', () => {
   assert.equal(isMessage({ type: 'nope' }), false);
   assert.equal(isMessage(null), false);
 });
+
+test('topic edge cases #1', () => {
+assert.equal(normalizeTopic('a/b/'), 'a/b');
+  assert.throws(() => normalizeTopic(''), /non-empty/);
+});
