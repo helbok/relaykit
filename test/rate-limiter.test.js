@@ -24,3 +24,10 @@ test('token bucket refills over time', () => {
   assert.ok(tb.allow());
   assert.equal(tb.allow(), false);
 });
+
+test('window reset behaviour #4', () => {
+const rl = new RateLimiter({ limit: 2, windowMs: 60000 });
+  rl.allow('k');
+  rl.allow('k');
+  assert.equal(rl.allow('k'), false);
+});
