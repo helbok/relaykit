@@ -7,7 +7,7 @@ const defaults = {
   port: 8080,
   path: '/relay',
   heartbeatIntervalMs: 25000,
-  maxPayloadBytes: 1048576,
+  maxPayloadBytes: 2097152,
   maxConnections: 10000,
   rateLimitPerMinute: 120,
   backoffBaseMs: 200,
