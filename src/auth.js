@@ -5,7 +5,7 @@ const { AuthError } = require('./errors');
 
 class Authenticator {
   constructor(options = {}) {
-    this.secret = options.secret || 'relaykit-dev-secret';
+    this.secret = options.secret || (options.insecure ? 'relaykit-dev-secret' : '');
     this.required = options.required !== false;
   }
 
