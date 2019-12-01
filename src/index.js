@@ -11,6 +11,7 @@ const { loadConfig, defaults } = require('./config');
 const errors = require('./errors');
 const { createMessage, normalizeTopic } = require('./message');
 const { Backoff } = require('./backoff');
+const validation = require('./validation');
 const { RateLimiter, TokenBucket } = require('./rate-limiter');
 
 function createRelay(options) {
@@ -34,4 +35,5 @@ module.exports = {
   Backoff,
   RateLimiter,
   TokenBucket,
+  validation,
 };
