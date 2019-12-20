@@ -21,3 +21,8 @@ test('authenticate is a no-op when not required', () => {
   const auth = new Authenticator({ required: false });
   assert.equal(auth.authenticate({}, 'junk'), true);
 });
+
+test('missing token #7', () => {
+const auth = new Authenticator({ secret: 's' });
+  assert.throws(() => auth.verify(''), /missing/);
+});
