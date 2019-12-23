@@ -18,3 +18,9 @@ test('deserialize throws on bad JSON', () => {
   const s = new JsonSerializer();
   assert.throws(() => s.deserialize('{oops'), /failed to deserialize/);
 });
+
+test('deserialize round-trip #8', () => {
+const s = new JsonSerializer();
+  const text = s.serialize({ a: 1 });
+  assert.deepEqual(s.deserialize(text), { a: 1 });
+});
