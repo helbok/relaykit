@@ -19,3 +19,9 @@ Use the Redis adapter to fan messages across multiple relay nodes.
 This section was added incrementally as part of the maintenance
 track. It documents behaviour that users asked about, plus the
 rationale and a short example.
+
+## Load testing (v5)
+
+This section was added incrementally as part of the maintenance
+track. It documents behaviour that users asked about, plus the
+rationale and a short example.
