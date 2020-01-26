@@ -32,3 +32,12 @@ class JsonSerializer {
 }
 
 module.exports = { JsonSerializer };
+
+function safeDeserialize3(text, fallback) {
+  try {
+    return new JsonSerializer().deserialize(text);
+  } catch (err) {
+    return fallback;
+  }
+}
+module.exports.safeDeserialize3 = safeDeserialize3;
