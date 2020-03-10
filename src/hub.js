@@ -35,7 +35,8 @@ class Hub extends EventEmitter {
     const set = this.subscribers.get(topic);
     if (!set) return 0;
     let delivered = 0;
-    for (const connection of set) {
+    for (const connection of [...set]) {
+      if (!connection.isOpen) { set.delete(connection); continue; }
       connection.send(message);
       delivered += 1;
     }
