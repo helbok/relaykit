@@ -8,6 +8,9 @@ function validateTopic(topic) {
   if (typeof topic !== 'string' || topic.length === 0) {
     throw new InvalidMessageError('topic must be a non-empty string');
   }
+  if (topic.includes('\0')) {
+    throw new InvalidMessageError('null bytes are not allowed in topics');
+  }
   if (topic.includes('*') || topic.includes('#')) {
     throw new InvalidMessageError('wildcards are not allowed in topics');
   }
