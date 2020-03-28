@@ -19,6 +19,10 @@ class SendQueue {
     return items.length;
   }
 
+  clear() {
+    this.items = [];
+  }
+
   get size() {
     return this.items.length;
   }
