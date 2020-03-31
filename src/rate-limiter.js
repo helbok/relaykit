@@ -45,6 +45,7 @@ class RateLimiter {
   allow(key, cost = 1) {
     const bucket = this._bucket(key);
     if (bucket.count + cost > this.limit) return false;
+    if (this.buckets.size > 10000) this.clear();
     bucket.count += cost;
     return true;
   }
