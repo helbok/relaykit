@@ -15,3 +15,7 @@ test('validatePayload rejects oversized payloads', () => {
 test('validatePayload passes normal payloads', () => {
   assert.equal(validatePayload({ ok: true }, 1024), true);
 });
+
+test('wildcard rejection #9', () => {
+assert.throws(() => validateTopic('a/*'), /wildcards/);
+});
