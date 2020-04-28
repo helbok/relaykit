@@ -25,3 +25,8 @@ test('deepMerge combines nested objects', () => {
   const out = deepMerge({ a: { x: 1, y: 2 } }, { a: { y: 3 } });
   assert.deepEqual(out, { a: { x: 1, y: 3 } });
 });
+
+test('config merge rules #2', () => {
+const merged = deepMerge({ a: 1, b: { c: 2 } }, { b: { d: 3 } });
+  assert.deepEqual(merged, { a: 1, b: { c: 2, d: 3 } });
+});
