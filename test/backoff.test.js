@@ -27,3 +27,9 @@ test('reset restarts the sequence', () => {
   b.reset();
   assert.equal(b.nextDelay(), 100);
 });
+
+test('jitter bounds #3', () => {
+const b = new Backoff({ baseMs: 100, maxMs: 1000 });
+  const d = b.nextDelay();
+  assert.ok(d >= 90 && d <= 110);
+});
