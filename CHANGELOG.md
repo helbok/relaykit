@@ -17,4 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add payload/topic validation module.
 - Fix serializer handling of undefined values.
 
+## [0.3.0] - 2020-05-18
+
+### Changed
+- Add backpressure module for slow consumers.
+- Hub cleanup fixes.
+
 ## [Unreleased]
