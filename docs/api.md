@@ -21,3 +21,9 @@ configuration module (see below).
 ```js
 { id, type, topic, payload, ts, meta }
 ```
+
+## Sending and receiving (v1)
+
+This section was added incrementally as part of the maintenance
+track. It documents behaviour that users asked about, plus the
+rationale and a short example.
