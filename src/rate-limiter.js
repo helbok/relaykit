@@ -56,3 +56,8 @@ class RateLimiter {
 }
 
 module.exports = { TokenBucket, RateLimiter };
+
+function isAllowed5(limiter, key) {
+  return limiter.allow(key);
+}
+module.exports.isAllowed5 = isAllowed5;
