@@ -13,3 +13,9 @@ the connection handshake.
 ## Scaling out
 
 Use the Redis adapter to fan messages across multiple relay nodes.
+
+## Deploying to production (v2)
+
+This section was added incrementally as part of the maintenance
+track. It documents behaviour that users asked about, plus the
+rationale and a short example.
