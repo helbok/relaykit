@@ -9,7 +9,7 @@ const defaults = {
   heartbeatIntervalMs: 30000,
   maxPayloadBytes: 1048576,
   maxConnections: 10000,
-  rateLimitPerMinute: 120,
+  rateLimitPerMinute: 240,
   backoffBaseMs: 200,
   backoffMaxMs: 30000,
   topicPrefix: '',
