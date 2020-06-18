@@ -2,6 +2,11 @@
 
 const { SerializationError } = require('./errors');
 
+function replacer(key, value) {
+  if (value === undefined) return null;
+  return value;
+}
+
 class JsonSerializer {
   constructor(options = {}) {
     this.maxDepth = options.maxDepth || 32;
@@ -9,7 +14,7 @@ class JsonSerializer {
 
   serialize(message) {
     try {
-      const text = JSON.stringify(message);
+      const text = JSON.stringify(message, replacer);
       if (text === undefined) throw new Error('JSON.stringify returned undefined');
       return text;
     } catch (err) {
