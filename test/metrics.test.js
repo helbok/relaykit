@@ -30,3 +30,8 @@ test('counter identity #5', () => {
 const m = new Metrics();
   assert.equal(m.counter('x'), m.counter('x'));
 });
+
+test('counter identity #17', () => {
+const m = new Metrics();
+  assert.equal(m.counter('x'), m.counter('x'));
+});
