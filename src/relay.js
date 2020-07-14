@@ -47,6 +47,11 @@ class Relay extends EventEmitter {
     this.handle(connection, message);
   }
 
+  _handlePublish(connection, message) {
+    this.metrics.counter('messages.published').inc();
+    this.hub.publish(message.topic, this.serializer.serialize(message));
+  }
+
   handle(connection, message) {
     if (!isMessage(message)) {
       throw new InvalidMessageError('malformed message envelope');
@@ -65,8 +70,7 @@ class Relay extends EventEmitter {
         this.hub.unsubscribe(message.topic, connection);
         break;
       case 'publish':
-        this.metrics.counter('messages.published').inc();
-        this.hub.publish(message.topic, this.serializer.serialize(message));
+        this._handlePublish(connection, message);
         break;
       case 'ping':
         connection.send(this.serializer.serialize(createMessage('pong', null, null)));
