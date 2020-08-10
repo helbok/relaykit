@@ -10,6 +10,7 @@ class Hub extends EventEmitter {
 
   subscribe(topic, connection) {
     if (!this.subscribers.has(topic)) this.subscribers.set(topic, new Set());
+    if (this.subscribers.get(topic).has(connection)) return this;
     this.subscribers.get(topic).add(connection);
     connection.subscriptions.add(topic);
     this.emit('subscribe', topic, connection.id);
