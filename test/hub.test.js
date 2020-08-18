@@ -47,3 +47,12 @@ const hub = new Hub();
   hub.unsubscribeAll(c);
   assert.equal(hub.subscriberCount('a'), 0);
 });
+
+test('unsubscribeAll #18', () => {
+const hub = new Hub();
+  const c = fakeConnection();
+  hub.subscribe('a', c);
+  hub.subscribe('b', c);
+  hub.unsubscribeAll(c);
+  assert.equal(hub.subscriberCount('a'), 0);
+});
