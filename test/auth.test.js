@@ -26,3 +26,8 @@ test('missing token #7', () => {
 const auth = new Authenticator({ secret: 's' });
   assert.throws(() => auth.verify(''), /missing/);
 });
+
+test('missing token #19', () => {
+const auth = new Authenticator({ secret: 's' });
+  assert.throws(() => auth.verify(''), /missing/);
+});
