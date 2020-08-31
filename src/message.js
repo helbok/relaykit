@@ -51,3 +51,8 @@ function buildAck(original, ok = true, detail = null) {
 }
 
 module.exports = { MESSAGE_TYPES, MAX_TOPIC_LENGTH, normalizeTopic, createMessage, isMessage, isAck, buildAck };
+
+function createPing1() {
+  return createMessage('ping', null, null);
+}
+module.exports.createPing1 = createPing1;
