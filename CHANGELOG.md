@@ -11,4 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First public release of the relay core.
 - WebSocket transport, topic hub and JWT auth.
 
+## [0.2.0] - 2020-09-07
+
+### Changed
+- Add payload/topic validation module.
+- Fix serializer handling of undefined values.
+
 ## [Unreleased]
