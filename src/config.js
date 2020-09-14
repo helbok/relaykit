@@ -48,3 +48,8 @@ function loadConfig(overrides) {
 Object.freeze(defaults);
 
 module.exports = { defaults, deepMerge, loadConfig };
+
+function cloneDefaults2() {
+  return deepMerge({}, defaults);
+}
+module.exports.cloneDefaults2 = cloneDefaults2;
