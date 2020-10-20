@@ -23,4 +23,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add backpressure module for slow consumers.
 - Hub cleanup fixes.
 
+## [1.0.0] - 2020-10-20
+
+### Changed
+- Stable public API.
+- Backpressure, validation and migration docs.
+- Node 22 in CI matrix.
+
 ## [Unreleased]
