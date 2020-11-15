@@ -19,3 +19,7 @@ test('validatePayload passes normal payloads', () => {
 test('wildcard rejection #9', () => {
 assert.throws(() => validateTopic('a/*'), /wildcards/);
 });
+
+test('wildcard rejection #21', () => {
+assert.throws(() => validateTopic('a/*'), /wildcards/);
+});
