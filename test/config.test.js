@@ -35,3 +35,8 @@ test('config merge rules #14', () => {
 const merged = deepMerge({ a: 1, b: { c: 2 } }, { b: { d: 3 } });
   assert.deepEqual(merged, { a: 1, b: { c: 2, d: 3 } });
 });
+
+test('config merge rules #26', () => {
+const merged = deepMerge({ a: 1, b: { c: 2 } }, { b: { d: 3 } });
+  assert.deepEqual(merged, { a: 1, b: { c: 2, d: 3 } });
+});
