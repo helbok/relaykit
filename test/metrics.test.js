@@ -25,3 +25,8 @@ test('snapshot serializes to plain object', () => {
   assert.equal(snap.counters.hits, 5);
   assert.ok(snap.ts > 0);
 });
+
+test('counter identity #5', () => {
+const m = new Metrics();
+  assert.equal(m.counter('x'), m.counter('x'));
+});
