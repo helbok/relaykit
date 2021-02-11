@@ -20,7 +20,7 @@
     "ioredis": "5.0.2",
     "express": "5.1.0",
     "helmet": "4.0.2",
-    "pino": "6.0.1",
+    "pino": "6.0.2",
     "dotenv": "8.3.1",
     "compression": "1.9.0"
   },
