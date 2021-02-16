@@ -38,3 +38,12 @@ test('subscriberCount reports active subscribers', () => {
   hub.subscribe('news', c);
   assert.equal(hub.subscriberCount('news'), 1);
 });
+
+test('unsubscribeAll #6', () => {
+const hub = new Hub();
+  const c = fakeConnection();
+  hub.subscribe('a', c);
+  hub.subscribe('b', c);
+  hub.unsubscribeAll(c);
+  assert.equal(hub.subscriberCount('a'), 0);
+});
