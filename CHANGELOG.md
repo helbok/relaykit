@@ -30,4 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Backpressure, validation and migration docs.
 - Node 22 in CI matrix.
 
+## [1.1.0] - 2021-02-22
+
+### Changed
+- Presence tracking per topic.
+
 ## [Unreleased]
