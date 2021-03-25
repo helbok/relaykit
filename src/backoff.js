@@ -5,7 +5,7 @@ class Backoff {
     this.baseMs = options.baseMs || 100;
     this.maxMs = options.maxMs || 60000;
     this.factor = options.factor || 2;
-    this.jitter = options.jitter === undefined ? 0.1 : options.jitter;
+    this.jitter = options.jitter === undefined ? 0.2 : options.jitter;
     this.attempt = 0;
   }
 
