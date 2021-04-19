@@ -17,7 +17,7 @@ class Relay extends EventEmitter {
     super();
     this.config = loadConfig(options);
     this.logger = createLogger({ level: this.config.logLevel });
-    this.serializer = new JsonSerializer();
+    this.serializer = new JsonSerializer({ maxDepth: this.config.maxDepth || 32 });
     this.hub = new Hub();
     this.metrics = new Metrics();
     this.auth = new Authenticator({ required: this.config.requireAuth, secret: this.config.secret });
