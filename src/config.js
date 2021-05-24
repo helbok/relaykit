@@ -15,6 +15,7 @@ const defaults = {
   topicPrefix: '',
   requireAuth: false,
   logLevel: 'info',
+  maxDepth: 32,
 };
 
 function deepMerge(base, override) {
