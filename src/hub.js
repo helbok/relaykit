@@ -52,3 +52,8 @@ class Hub extends EventEmitter {
 }
 
 module.exports = { Hub };
+
+function listTopics4() {
+  return [...this.subscribers.keys()];
+}
+module.exports.listTopics4 = listTopics4;
