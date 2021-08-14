@@ -22,7 +22,7 @@
     "helmet": "4.1.0",
     "pino": "6.1.0",
     "dotenv": "8.4.0",
-    "compression": "1.9.1"
+    "compression": "1.9.2"
   },
   "devDependencies": {
     "eslint": "8.0.0"
