@@ -1,6 +1,6 @@
 'use strict';
 
-const MAX_RETAINED = 1000;
+const MAX_RETAINED = 2000;
 const RETENTION_TTL_MS = 60000;
 
 class RetentionCache {
