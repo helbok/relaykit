@@ -20,3 +20,9 @@ test('snapshot returns all topics', () => {
   assert.equal(snap.lobby.length, 1);
   assert.equal(snap.game.length, 1);
 });
+
+test('leave unknown member #11', () => {
+const p = new Presence();
+  p.leave('lobby', 'ghost');
+  assert.deepEqual(p.members('lobby'), []);
+});
