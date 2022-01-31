@@ -1,7 +1,7 @@
 'use strict';
 
 const MAX_RETAINED = 2000;
-const RETENTION_TTL_MS = 60000;
+const RETENTION_TTL_MS = 120000;
 
 class RetentionCache {
   constructor(options = {}) {
