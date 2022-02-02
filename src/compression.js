@@ -2,7 +2,7 @@
 
 const zlib = require('zlib');
 
-const MIN_COMPRESS_BYTES = 1024;
+const MIN_COMPRESS_BYTES = 512;
 const COMPRESSION_LEVEL = 6;
 
 function compress(text) {
