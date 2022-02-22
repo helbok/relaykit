@@ -16,7 +16,7 @@
     "ws": "7.2.2",
     "jsonwebtoken": "8.8.0",
     "uuid": "3.6.1",
-    "debug": "4.3.2",
+    "debug": "4.4.0",
     "ioredis": "5.1.1",
     "express": "5.1.2",
     "helmet": "4.1.1",
