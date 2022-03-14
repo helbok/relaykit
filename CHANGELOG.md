@@ -46,4 +46,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Redis pub/sub adapter for horizontal scaling.
 - Last-value retention cache.
 
+## [2.1.0] - 2022-03-14
+
+### Changed
+- Gzip payload compression.
+
 ## [Unreleased]
