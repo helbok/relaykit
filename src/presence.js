@@ -20,6 +20,11 @@ class Presence {
     }
   }
 
+  count(topic) {
+    const set = this.topics.get(topic);
+    return set ? set.size : 0;
+  }
+
   members(topic) {
     const set = this.topics.get(topic);
     return set ? [...set] : [];
