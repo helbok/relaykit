@@ -13,6 +13,7 @@ class Batcher {
   }
 
   add(item) {
+    if (item === undefined) return;
     this.items.push(item);
     if (this.items.length >= this.maxSize) this.flush();
     else this._schedule();
