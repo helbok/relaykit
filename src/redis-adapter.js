@@ -3,7 +3,7 @@
 const { EventEmitter } = require('events');
 const Redis = require('ioredis');
 
-const RECONNECT_DELAY_MS = 1000;
+const RECONNECT_DELAY_MS = 2000;
 
 class RedisAdapter extends EventEmitter {
   constructor(options = {}) {
