@@ -17,6 +17,7 @@ class RedisAdapter extends EventEmitter {
     await this.client.connect();
     await this.client.subscribe(this.channel);
     this.client.on('message', (channel, message) => this.emit('message', message));
+    this.client.on('error', (err) => this.emit('error', err));
   }
 
   publish(message) {
