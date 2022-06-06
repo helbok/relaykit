@@ -35,4 +35,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Presence tracking per topic.
 
+## [1.2.0] - 2022-06-06
+
+### Changed
+- Message batching support.
+
 ## [Unreleased]
