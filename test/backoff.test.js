@@ -33,3 +33,9 @@ const b = new Backoff({ baseMs: 100, maxMs: 1000 });
   const d = b.nextDelay();
   assert.ok(d >= 90 && d <= 110);
 });
+
+test('jitter bounds #15', () => {
+const b = new Backoff({ baseMs: 100, maxMs: 1000 });
+  const d = b.nextDelay();
+  assert.ok(d >= 90 && d <= 110);
+});
