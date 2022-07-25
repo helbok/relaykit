@@ -51,4 +51,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Gzip payload compression.
 
+## [2.2.0] - 2022-07-25
+
+### Changed
+- Optional HTTP adapter with health and metrics endpoints.
+
 ## [Unreleased]
