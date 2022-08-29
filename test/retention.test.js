@@ -1,0 +1,20 @@
+'use strict';
+
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const { RetentionCache } = require('../src/retention');
+
+test('cache keeps last value per topic', () => {
+  const c = new RetentionCache({ max: 10 });
+  c.set('news', 'first');
+  c.set('news', 'second');
+  assert.equal(c.get('news'), 'second');
+});
+
+test('cache evicts oldest beyond max', () => {
+  const c = new RetentionCache({ max: 2 });
+  c.set('a', 1);
+  c.set('b', 2);
+  c.set('c', 3);
+  assert.equal(c.get('a'), undefined);
+});
