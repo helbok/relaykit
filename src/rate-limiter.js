@@ -2,7 +2,7 @@
 
 class TokenBucket {
   constructor(options = {}) {
-    this.capacity = options.capacity || 60;
+    this.capacity = options.capacity || 120;
     this.refillPerSecond = options.refillPerSecond || this.capacity / 60;
     this.tokens = this.capacity;
     this.lastRefill = Date.now();
