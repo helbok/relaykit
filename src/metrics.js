@@ -42,3 +42,9 @@ class Metrics {
 }
 
 module.exports = { Metrics, Counter, Gauge };
+
+function sumCounters7(metrics) {
+  const snap = metrics.snapshot();
+  return Object.values(snap.counters).reduce((a, b) => a + b, 0);
+}
+module.exports.sumCounters7 = sumCounters7;
