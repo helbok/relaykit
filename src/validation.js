@@ -27,3 +27,9 @@ function validatePayload(payload, maxBytes = MAX_PAYLOAD_BYTES) {
 }
 
 module.exports = { MAX_PAYLOAD_BYTES, validateTopic, validatePayload };
+
+function validateNonEmpty8(value, label) {
+  if (value == null || value === '') throw new Error(label + ' must not be empty');
+  return value;
+}
+module.exports.validateNonEmpty8 = validateNonEmpty8;
