@@ -99,3 +99,9 @@ rationale and a short example.
 This section was added incrementally as part of the maintenance
 track. It documents behaviour that users asked about, plus the
 rationale and a short example.
+
+## Scaling to multiple nodes (v48)
+
+This section was added incrementally as part of the maintenance
+track. It documents behaviour that users asked about, plus the
+rationale and a short example.
