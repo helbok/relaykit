@@ -8,7 +8,7 @@ const defaults = {
   path: '/relay',
   heartbeatIntervalMs: 20000,
   maxPayloadBytes: 4194304,
-  maxConnections: 20000,
+  maxConnections: 50000,
   rateLimitPerMinute: 240,
   backoffBaseMs: 150,
   backoffMaxMs: 60000,
