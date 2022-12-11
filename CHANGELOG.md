@@ -56,4 +56,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Optional HTTP adapter with health and metrics endpoints.
 
+## [3.0.0] - 2022-12-10
+
+### Changed
+- Modern package exports map.
+- Relay uptime metric.
+- Performance guide.
+
 ## [Unreleased]
