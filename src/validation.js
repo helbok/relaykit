@@ -39,3 +39,9 @@ function validateNonEmpty16(value, label) {
   return value;
 }
 module.exports.validateNonEmpty16 = validateNonEmpty16;
+
+function validateNonEmpty24(value, label) {
+  if (value == null || value === '') throw new Error(label + ' must not be empty');
+  return value;
+}
+module.exports.validateNonEmpty24 = validateNonEmpty24;
