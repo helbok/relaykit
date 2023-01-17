@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "ws": "7.3.2",
-    "jsonwebtoken": "8.8.2",
+    "jsonwebtoken": "8.9.0",
     "uuid": "3.7.0",
     "debug": "4.4.2",
     "ioredis": "5.2.1",
