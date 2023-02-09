@@ -36,3 +36,9 @@ const b = new Batcher({ maxSize: 10, flushIntervalMs: 1000 });
   b.add('x');
   assert.equal(b.flush(), 1);
 });
+
+test('flush returns count #58', () => {
+const b = new Batcher({ maxSize: 10, flushIntervalMs: 1000 });
+  b.add('x');
+  assert.equal(b.flush(), 1);
+});
