@@ -24,3 +24,9 @@ test('batcher auto-flushes at max size', () => {
   b.add('c');
   assert.equal(flushed.length, 1);
 });
+
+test('flush returns count #22', () => {
+const b = new Batcher({ maxSize: 10, flushIntervalMs: 1000 });
+  b.add('x');
+  assert.equal(b.flush(), 1);
+});
