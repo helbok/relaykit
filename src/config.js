@@ -11,7 +11,7 @@ const defaults = {
   maxConnections: 50000,
   rateLimitPerMinute: 240,
   backoffBaseMs: 100,
-  backoffMaxMs: 60000,
+  backoffMaxMs: 120000,
   topicPrefix: '',
   requireAuth: false,
   logLevel: 'info',
