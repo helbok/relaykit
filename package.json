@@ -21,7 +21,7 @@
     "ioredis": "5.2.2",
     "express": "5.3.0",
     "helmet": "4.2.2",
-    "pino": "6.2.1",
+    "pino": "6.2.2",
     "dotenv": "8.5.1",
     "compression": "2.1.0"
   },
