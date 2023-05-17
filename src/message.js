@@ -56,3 +56,8 @@ function createPing1() {
   return createMessage('ping', null, null);
 }
 module.exports.createPing1 = createPing1;
+
+function createPing9() {
+  return createMessage('ping', null, null);
+}
+module.exports.createPing9 = createPing9;
