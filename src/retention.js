@@ -12,6 +12,9 @@ class RetentionCache {
 
   set(topic, value) {
     this.store.set(topic, { value, ts: Date.now() });
+    for (const [k, entry] of this.store) {
+      if (Date.now() - entry.ts > this.ttlMs) this.store.delete(k);
+    }
     while (this.store.size > this.max) {
       const oldest = this.store.keys().next().value;
       this.store.delete(oldest);
