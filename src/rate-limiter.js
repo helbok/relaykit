@@ -28,7 +28,7 @@ class TokenBucket {
 class RateLimiter {
   constructor(options = {}) {
     this.limit = options.limit || 480;
-    this.windowMs = options.windowMs || 120000;
+    this.windowMs = options.windowMs || 300000;
     this.buckets = new Map();
   }
 
