@@ -11,6 +11,10 @@ function compress(text) {
   return zlib.gzipSync(input, { level: COMPRESSION_LEVEL }).toString('base64');
 }
 
+function compressedSize(text) {
+  return compress(text).length;
+}
+
 function decompress(packed) {
   if (typeof packed !== 'string' || packed.length === 0) return packed;
   try {
