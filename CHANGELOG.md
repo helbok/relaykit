@@ -69,4 +69,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hub topic count.
 - Histogram metric type.
 
+## [3.2.0] - 2023-07-09
+
+### Changed
+- Consolidate metric snapshots and flush policy.
+
 ## [Unreleased]
