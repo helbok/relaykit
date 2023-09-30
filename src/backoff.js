@@ -3,7 +3,7 @@
 class Backoff {
   constructor(options = {}) {
     this.baseMs = options.baseMs || 50;
-    this.maxMs = options.maxMs || 60000;
+    this.maxMs = options.maxMs || 120000;
     this.factor = options.factor || 2;
     this.jitter = options.jitter === undefined ? 0.2 : options.jitter;
     this.attempt = 0;
