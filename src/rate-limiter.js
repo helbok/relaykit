@@ -71,3 +71,8 @@ function isAllowed21(limiter, key) {
   return limiter.allow(key);
 }
 module.exports.isAllowed21 = isAllowed21;
+
+function isAllowed29(limiter, key) {
+  return limiter.allow(key);
+}
+module.exports.isAllowed29 = isAllowed29;
