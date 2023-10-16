@@ -18,3 +18,9 @@ test('cache evicts oldest beyond max', () => {
   c.set('c', 3);
   assert.equal(c.get('a'), undefined);
 });
+
+test('ttl expiry #24', () => {
+const c = new RetentionCache({ max: 10, ttlMs: 1 });
+  c.set('a', 1);
+  setTimeout(() => assert.equal(c.get('a'), undefined), 5);
+});
