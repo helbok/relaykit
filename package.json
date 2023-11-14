@@ -3,6 +3,7 @@
   "version": "2.2.0",
   "description": "A lightweight WebSocket event-relay library for Node.js",
   "main": "src/index.js",
+  "exports": { ".": "./src/index.js" },
   "scripts": {
     "test": "node --test test/",
     "lint": "eslint src test"
