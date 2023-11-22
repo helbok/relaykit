@@ -1,6 +1,7 @@
 'use strict';
 
 const { EventEmitter } = require('events');
+const { performance } = require('perf_hooks');
 const { createTransport } = require('./transport');
 const { Hub } = require('./hub');
 const { Authenticator } = require('./auth');
@@ -22,6 +23,7 @@ class Relay extends EventEmitter {
     this.metrics = new Metrics();
     this.auth = new Authenticator({ required: this.config.requireAuth, secret: this.config.secret });
     this.rateLimiter = new RateLimiter({ limit: this.config.rateLimitPerMinute });
+    this.startedAt = performance.now();
     this.transport = createTransport(this.config, (connection) => this._onConnection(connection));
     this.connections = new Set();
   }
