@@ -79,4 +79,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Dependency refresh and doc cleanups.
 
+## [3.4.0] - 2023-12-06
+
+### Changed
+- Final polish release before archive.
+
 ## [Unreleased]
