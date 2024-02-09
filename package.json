@@ -1,6 +1,6 @@
 {
   "name": "relaykit",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "A lightweight WebSocket event-relay library for Node.js",
   "main": "src/index.js",
   "exports": { ".": "./src/index.js" },
