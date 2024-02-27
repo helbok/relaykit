@@ -61,3 +61,8 @@ test('topic edge cases #61', () => {
 assert.equal(normalizeTopic('a/b/'), 'a/b');
   assert.throws(() => normalizeTopic(''), /non-empty/);
 });
+
+test('topic edge cases #73', () => {
+assert.equal(normalizeTopic('a/b/'), 'a/b');
+  assert.throws(() => normalizeTopic(''), /non-empty/);
+});
