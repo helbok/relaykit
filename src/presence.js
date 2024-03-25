@@ -1,6 +1,6 @@
 'use strict';
 
-const PRESENCE_TTL_MS = 45000;
+const PRESENCE_TTL_MS = 60000;
 
 class Presence {
   constructor() {
