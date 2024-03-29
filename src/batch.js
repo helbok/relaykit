@@ -1,6 +1,6 @@
 'use strict';
 
-const FLUSH_INTERVAL_MS = 100;
+const FLUSH_INTERVAL_MS = 200;
 const MAX_BATCH_SIZE = 200;
 
 class Batcher {
