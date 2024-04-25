@@ -45,6 +45,10 @@ class Hub extends EventEmitter {
     return delivered;
   }
 
+  topicCount() {
+    return this.subscribers.size;
+  }
+
   subscriberCount(topic) {
     const set = this.subscribers.get(topic);
     return set ? set.size : 0;
