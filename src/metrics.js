@@ -5,6 +5,17 @@ class Counter {
   inc(n = 1) { this.value += n; return this.value; }
 }
 
+class Histogram {
+  constructor() { this.values = []; }
+  observe(n) { this.values.push(n); }
+  percentile(p) {
+    if (this.values.length === 0) return 0;
+    const sorted = [...this.values].sort((a, b) => a - b);
+    const idx = Math.min(sorted.length - 1, Math.floor((p / 100) * sorted.length));
+    return sorted[idx];
+  }
+}
+
 class Gauge {
   constructor() { this.value = 0; }
   set(n) { this.value = n; }
