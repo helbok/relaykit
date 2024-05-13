@@ -50,6 +50,11 @@ class Metrics {
   toJSON() {
     return this.snapshot();
   }
+
+  reset() {
+    this.counters.clear();
+    this.gauges.clear();
+  }
 }
 
 module.exports = { Metrics, Counter, Gauge };
