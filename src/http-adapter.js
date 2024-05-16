@@ -14,6 +14,7 @@ class HttpAdapter {
     this.app.use(compression());
     this.app.get('/health', this.healthHandler.bind(this));
     this.app.get('/metrics', this.metricsHandler.bind(this));
+    this.app.use((req, res) => res.status(404).json({ error: 'not found' }));
   }
 
   healthHandler(req, res) {
