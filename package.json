@@ -20,7 +20,7 @@
     "debug": "4.6.1",
     "ioredis": "5.4.0",
     "express": "5.4.1",
-    "helmet": "4.3.2",
+    "helmet": "4.4.0",
     "pino": "6.3.2",
     "dotenv": "8.6.2",
     "compression": "2.2.1"
