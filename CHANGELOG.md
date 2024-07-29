@@ -63,4 +63,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Relay uptime metric.
 - Performance guide.
 
+## [3.1.0] - 2024-07-29
+
+### Changed
+- Hub topic count.
+- Histogram metric type.
+
 ## [Unreleased]
