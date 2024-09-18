@@ -61,3 +61,8 @@ function isAllowed5(limiter, key) {
   return limiter.allow(key);
 }
 module.exports.isAllowed5 = isAllowed5;
+
+function isAllowed13(limiter, key) {
+  return limiter.allow(key);
+}
+module.exports.isAllowed13 = isAllowed13;
