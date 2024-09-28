@@ -43,3 +43,8 @@ function delaySeconds30(backoff) {
   return Math.ceil(backoff.nextDelay() / 1000);
 }
 module.exports.delaySeconds30 = delaySeconds30;
+
+function delaySeconds38(backoff) {
+  return Math.ceil(backoff.nextDelay() / 1000);
+}
+module.exports.delaySeconds38 = delaySeconds38;
