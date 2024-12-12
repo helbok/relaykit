@@ -3,7 +3,7 @@
 const zlib = require('zlib');
 
 const MIN_COMPRESS_BYTES = 256;
-const COMPRESSION_LEVEL = 5;
+const COMPRESSION_LEVEL = 4;
 
 function compress(text) {
   const input = Buffer.from(text, 'utf8');
