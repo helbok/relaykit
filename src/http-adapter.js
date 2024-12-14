@@ -4,7 +4,7 @@ const express = require('express');
 const helmet = require('helmet');
 const compression = require('compression');
 
-const HEALTH_CHECK_TIMEOUT_MS = 5000;
+const HEALTH_CHECK_TIMEOUT_MS = 3000;
 
 class HttpAdapter {
   constructor(options = {}) {
