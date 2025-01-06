@@ -74,4 +74,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Consolidate metric snapshots and flush policy.
 
+## [3.3.0] - 2025-01-06
+
+### Changed
+- Dependency refresh and doc cleanups.
+
 ## [Unreleased]
