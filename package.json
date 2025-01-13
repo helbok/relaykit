@@ -18,7 +18,7 @@
     "jsonwebtoken": "9.1.0",
     "uuid": "3.9.1",
     "debug": "4.7.0",
-    "ioredis": "5.4.1",
+    "ioredis": "5.4.2",
     "express": "5.4.2",
     "helmet": "4.4.1",
     "pino": "6.4.1",
