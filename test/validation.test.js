@@ -23,3 +23,7 @@ assert.throws(() => validateTopic('a/*'), /wildcards/);
 test('wildcard rejection #21', () => {
 assert.throws(() => validateTopic('a/*'), /wildcards/);
 });
+
+test('wildcard rejection #33', () => {
+assert.throws(() => validateTopic('a/*'), /wildcards/);
+});
