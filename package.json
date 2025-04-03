@@ -14,7 +14,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "ws": "7.5.2",
+    "ws": "7.6.0",
     "jsonwebtoken": "9.1.0",
     "uuid": "3.9.1",
     "debug": "4.7.0",
