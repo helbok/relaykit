@@ -19,7 +19,7 @@
     "uuid": "3.9.2",
     "debug": "4.7.1",
     "ioredis": "5.5.0",
-    "express": "5.5.0",
+    "express": "5.5.1",
     "helmet": "4.4.2",
     "pino": "6.4.2",
     "dotenv": "8.7.2",
