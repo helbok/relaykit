@@ -77,3 +77,12 @@ function safeDeserialize35(text, fallback) {
   }
 }
 module.exports.safeDeserialize35 = safeDeserialize35;
+
+function safeDeserialize43(text, fallback) {
+  try {
+    return new JsonSerializer().deserialize(text);
+  } catch (err) {
+    return fallback;
+  }
+}
+module.exports.safeDeserialize43 = safeDeserialize43;
