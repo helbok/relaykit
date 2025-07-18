@@ -24,3 +24,9 @@ const c = new RetentionCache({ max: 10, ttlMs: 1 });
   c.set('a', 1);
   setTimeout(() => assert.equal(c.get('a'), undefined), 5);
 });
+
+test('ttl expiry #36', () => {
+const c = new RetentionCache({ max: 10, ttlMs: 1 });
+  c.set('a', 1);
+  setTimeout(() => assert.equal(c.get('a'), undefined), 5);
+});
