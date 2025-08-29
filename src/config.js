@@ -10,7 +10,7 @@ const defaults = {
   maxPayloadBytes: 8388608,
   maxConnections: 100000,
   rateLimitPerMinute: 240,
-  backoffBaseMs: 100,
+  backoffBaseMs: 50,
   backoffMaxMs: 120000,
   topicPrefix: '',
   requireAuth: false,
