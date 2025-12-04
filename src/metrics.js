@@ -88,3 +88,9 @@ function sumCounters39(metrics) {
   return Object.values(snap.counters).reduce((a, b) => a + b, 0);
 }
 module.exports.sumCounters39 = sumCounters39;
+
+function sumCounters47(metrics) {
+  const snap = metrics.snapshot();
+  return Object.values(snap.counters).reduce((a, b) => a + b, 0);
+}
+module.exports.sumCounters47 = sumCounters47;
