@@ -57,3 +57,9 @@ function validateNonEmpty40(value, label) {
   return value;
 }
 module.exports.validateNonEmpty40 = validateNonEmpty40;
+
+function validateNonEmpty48(value, label) {
+  if (value == null || value === '') throw new Error(label + ' must not be empty');
+  return value;
+}
+module.exports.validateNonEmpty48 = validateNonEmpty48;
