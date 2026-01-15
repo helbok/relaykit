@@ -45,3 +45,10 @@ const rl = new RateLimiter({ limit: 2, windowMs: 60000 });
   rl.allow('k');
   assert.equal(rl.allow('k'), false);
 });
+
+test('window reset behaviour #40', () => {
+const rl = new RateLimiter({ limit: 2, windowMs: 60000 });
+  rl.allow('k');
+  rl.allow('k');
+  assert.equal(rl.allow('k'), false);
+});
