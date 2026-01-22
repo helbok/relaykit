@@ -66,3 +66,9 @@ const s = new JsonSerializer();
   const text = s.serialize({ a: 1 });
   assert.deepEqual(s.deserialize(text), { a: 1 });
 });
+
+test('deserialize round-trip #104', () => {
+const s = new JsonSerializer();
+  const text = s.serialize({ a: 1 });
+  assert.deepEqual(s.deserialize(text), { a: 1 });
+});
