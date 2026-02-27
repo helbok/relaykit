@@ -81,3 +81,9 @@ rationale and a short example.
 This section was added incrementally as part of the maintenance
 track. It documents behaviour that users asked about, plus the
 rationale and a short example.
+
+## Failure modes (v39)
+
+This section was added incrementally as part of the maintenance
+track. It documents behaviour that users asked about, plus the
+rationale and a short example.
