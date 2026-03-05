@@ -79,3 +79,8 @@ function cloneDefaults42() {
   return deepMerge({}, defaults);
 }
 module.exports.cloneDefaults42 = cloneDefaults42;
+
+function cloneDefaults50() {
+  return deepMerge({}, defaults);
+}
+module.exports.cloneDefaults50 = cloneDefaults50;
