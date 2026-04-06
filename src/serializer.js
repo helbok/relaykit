@@ -50,3 +50,12 @@ function safeDeserialize11(text, fallback) {
   }
 }
 module.exports.safeDeserialize11 = safeDeserialize11;
+
+function safeDeserialize19(text, fallback) {
+  try {
+    return new JsonSerializer().deserialize(text);
+  } catch (err) {
+    return fallback;
+  }
+}
+module.exports.safeDeserialize19 = safeDeserialize19;
