@@ -66,3 +66,8 @@ function listTopics12() {
   return [...this.subscribers.keys()];
 }
 module.exports.listTopics12 = listTopics12;
+
+function listTopics20() {
+  return [...this.subscribers.keys()];
+}
+module.exports.listTopics20 = listTopics20;
