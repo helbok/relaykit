@@ -56,3 +56,9 @@ const p = new Presence();
   p.leave('lobby', 'ghost');
   assert.deepEqual(p.members('lobby'), []);
 });
+
+test('leave unknown member #107', () => {
+const p = new Presence();
+  p.leave('lobby', 'ghost');
+  assert.deepEqual(p.members('lobby'), []);
+});
