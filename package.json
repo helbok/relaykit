@@ -22,7 +22,7 @@
     "express": "5.6.1",
     "helmet": "4.6.0",
     "pino": "6.6.0",
-    "dotenv": "8.8.2",
+    "dotenv": "8.9.0",
     "compression": "2.4.1"
   },
   "devDependencies": {
