@@ -6,7 +6,7 @@ const { ConnectionClosedError } = require('./errors');
 
 const STATES = { CONNECTING: 'connecting', OPEN: 'open', CLOSING: 'closing', CLOSED: 'closed' };
 
-const SEND_QUEUE_LIMIT = 4096;
+const SEND_QUEUE_LIMIT = 8192;
 
 class Connection extends EventEmitter {
   constructor(socket, options = {}) {
