@@ -22,6 +22,8 @@ npm install relaykit
 
 ## Usage
 
+> **Status:** archived — see [HISTORY.md](HISTORY.md).
+
 ```js
 const { createRelay } = require('relaykit');
 
