@@ -26,6 +26,6 @@
     "compression": "2.0.1"
   },
   "devDependencies": {
-    "eslint": "8.0.0"
+    "eslint": "10.13.0"
   }
 }
